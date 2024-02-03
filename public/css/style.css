@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --main-color: #16171b;
+    --secondary-color: #989898;
+    --tertiary-color: #505050;
+    --form-button-color: #0076f8;
+    --padding-card: 4.2rem;
+    --regular-font-size: .8rem
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 28rem 28rem;
+}
+
+.main-login{
+    background-color: var(--main-color);
+    border-top-left-radius: .12rem;
+    border-bottom-left-radius: .12rem;
+    padding: var(--padding-card);
+    padding-top: 2rem;
+}
+
+.main-login > .logo{
+    display: inline-block;
+    height: 2.4 rem;
+    width: 2.4rem;
+    margin-bottom: 1.2rem;
+    filter: invert(100%) sepia(100%) saturate(14%) hue-rotate(212deg) brightness(104%) contrast(104%);
+}
+
+.main-login .title{
+    color: white;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.main-login .description{
+    color: var(--secondary-color);
+    font-size: var(--regular-font-size);
+    margin-bottom: 1.6rem;
+}
+
+.form-input label{
+    color: var(--secondary-color);
+    display: block;
+    font-size: var(--regular-font-size);
+    margin-bottom: .4rem;
+}
+
+.form-input input{
+    background-color: var(--main-color);
+    border: 1.5px solid var(--tertiary-color);
+    border-radius: .12rem;
+    color: white;
+    padding: .8rem;
+    width: 100%;
+}
+
+.form-input input:focus{
+    outline: none;
+}
+
+.form-options{
+    display: flex;
+    align-items: center;
+    font-size: var(--regular-font-size);
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.form-options input{
+    height: 1rem;
+    width: 1rem;
+    margin-right: .2rem;
+    vertical-align: middle;
+}
+
+.form-options label{
+    color: var(--secondary-color);
+}
+
+.form-options a{
+    color: white;
+    font-weight: 300;
+}
+
+.form-button{
+    background-color: var(--form-button-color);
+    border-radius: .12rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: var(--regular-font-size);
+    padding: .8rem;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    transition: all 0.3s;
+}
+
+.form-button:hover{
+    background-color: #0056b3
+}
+
+.divider{
+    color: var(--secondary-color);
+    font-size: var(--regular-font-size);
+    margin: auto;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.form-button-google{
+    background-color: var(--main-color);
+    border: 1.5px solid var(--tertiary-color);
+    border-radius: .12rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    font-size: var(--regular-font-size);
+    margin-bottom: 1.2rem;
+    padding: .8rem;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.form-button-google:hover{
+    background-color: black;
+    border-color: var(--main-color);
+}
+
+.form-button-google .logo{
+    height: 1rem;
+    width: 1rem;
+}
+
+.go-register{
+    color: var(--secondary-color);
+    font-size: var(--regular-font-size);
+    margin-bottom: 1rem;
+}
+
+.go-register a{
+    color: white;
+}
+
+.main-photo{
+    background-image: url('../assets/images/login.webp');
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    padding: var(--padding-card);
+}
+
+.main-photo .quote{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.main-photo .author{
+    color: white;
+    font-size: .9rem;
+}
+
+/* SIGN UP */
+
+.main-register{
+    display: none;
+}
+
+/* GENERAL */
+
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+
+@media (width < 992px) {
+    body{
+        background-image: url('../assets/images/login.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        backdrop-filter: blur(20px);
+    }
+
+    .main {
+        grid-template-columns: auto;
+    }
+
+    .main-photo{
+        display: none;
+    }
+}
+
+@media (width < 600px){
+    .main-login{
+        padding: 2.4rem;
+    }
+}
